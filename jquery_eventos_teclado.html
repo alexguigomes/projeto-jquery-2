@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+    <head>
+
+        <meta charset="utf-8">
+        <title>EVENTOS DO TECLADO</title>
+
+            <!--Jquery-->
+            <script src="jquery2.2.0.js"></script>
+
+            <script type="text/javascript">
+
+            $(document).ready(function(){
+ 
+            
+            //CODIGOS PARA INTERAÇÃO DO teclado
+
+                //keydown (reconhece a digitação)
+                //keypress
+                //keyup
+               
+                //(toda vez que for apertado alguma tecla aparecerá uma caixa de dialogo)
+                $('#campo1').keydown(function(){
+                    alert('Botão foi pressionado');
+
+                });
+
+                // este comando "keypress" nao reconhece algumas teclas
+                $('#campo2').keypress(function(){
+                    alert('Botão foi pressionado');
+
+                });
+                
+                //este comando faz com que uma caixa de dialogo apareca depois de apertar uma tecla, segura-la e solta-la, após solta-la aparecera uma caixa de dialogo
+                //este comando reconhece quando precionamos e soltamos uma tecla
+                $('#campo3').keyup(function(){
+                    alert('Botão foi liberado');
+
+                });
+            });
+            </script>
+    
+    </head>
+
+    <body>
+        <!--campos de digitação-->
+        <input id="campo1" type="texto" />
+
+        <input id="campo2" type="texto" />
+
+        <input id="campo3" type="texto" />
+    </body>
+</html>
